@@ -1,0 +1,6 @@
+<p>Welcome to the server component</p>
+<h1 [ngStyle]="{'color' : (status)?'green' : 'red'}" >iD: {{id}}  status:{{(status)? 'on' : 'off'}} </h1>
+<p *ngIf="status;else noIp">ip : 192.0.0.1</p>
+<ng-template #noIp>No ip 0.0.0.0</ng-template>
+<br>
+<button class="btn btn-default" (click)="changeStatus()">{{(status)?'Disconnect':'Connect'}}</button>
